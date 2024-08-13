@@ -9,13 +9,14 @@ router.get("/tasks", async (req, res) => {
     res.send(tasks);
 });
 
-router.post("/tasks",  (req, res) => {
+router.post("/tasks", async  (req, res) => {
     const {title, description} = req.body;
 
     const task = new Task({title, description});
-    
-    console.log(task)    
-    res.send("creating taks!");
+
+    await task.save();
+  
+    res.json(task);
 
 });
 
