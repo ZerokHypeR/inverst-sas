@@ -20,8 +20,16 @@ router.post("/tasks", async  (req, res) => {
 
 });
 
-router.get ("/tasks/:id", (req,res) => {
-    res.send("getting a taks!");
+router.get ("/tasks/:id", async ( req,res) => {
+    try {
+        const task = await Task.findById(req.params.id);
+
+        if(!task) return res.status(404).json({ message: "Task No Found "});
+
+        res.send(task);
+    }   catch (error) {
+        return res.status(500).send(error);
+    }
 });
 
 
