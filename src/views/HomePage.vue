@@ -4,7 +4,7 @@
     <nav class="navbar">
       <div class="navbar-left">
         <img src="@/assets/logo.png" alt="Logo" class="logo" />
-        <h1>Nombre del Sistema</h1>
+        <h1>Inverst S.A.S</h1>
       </div>
       <div class="navbar-right">
         <div class="notifications">
