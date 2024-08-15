@@ -7,6 +7,12 @@ const routes: RouteRecordRaw[] = [
     name: 'UserLogin',
     component: () => import('../pages/login.vue'), 
   },
+
+  {
+    path: '/Register',
+    name:'UserRegister',
+    component: () => import('../pages/UserRegister.vue')
+  },
   {
     path: '/Carts',
     name: 'ChartsComponent',
