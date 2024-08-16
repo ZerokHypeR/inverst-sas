@@ -1,174 +1,250 @@
 <template>
-  <div class="home-container">
+  <div class="home">
     <!-- Barra de Navegación Superior -->
-    <nav class="navbar">
-      <div class="navbar-left">
-        <img src="@/assets/logo.png" alt="Logo" class="logo" />
-        <h1>Inverst S.A.S</h1>
+    <header class="navbar">
+      <div class="logo-container">
+        <img class="logo" src="../assets/image/Inverst-logo.png" alt="Logo" />
+        <span class="system-name">Inverst S.A.S</span>
       </div>
-      <div class="navbar-right">
-        <div class="notifications">
-          <i class="fas fa-bell"></i> <!-- Icono de notificaciones -->
-        </div>
-        <div class="user-menu">
-          <span>Perfil</span>
-          <span>Configuración</span>
-          <span @click="logout">Cerrar sesión</span>
+      <div class="user-info">
+        <div class="profile-menu">
+          <img class="user-photo" src="../assets/image/Inverst-logo.png" alt="Foto del Funcionario" />
+          <div class="dropdown">
+            <span @click="toggleDropdown">Perfil ▼</span>
+            <div v-if="dropdownOpen" class="dropdown-content">
+              <span @click="goToProfile">Perfil</span>
+              <span @click="goToSettings">Configuración</span>
+              <span @click="logout">Cerrar sesión</span>
+            </div>
+          </div>
+          <button @click="toggleNotifications" class="notification-btn">
+            <i class="fas fa-bell"></i> <!-- Icono de campanita -->
+            <span class="notification-count">{{ notifications.length }}</span>
+          </button>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Panel de Estado de Procesos -->
-    <div class="process-status-panel">
-      <h2>Estado de Procesos</h2>
+    <section class="status-panel">
       <div class="status-charts">
+        <h2>Gráficos de Seguimiento</h2>
         <div class="chart">
-          <h3>Transacciones en Progreso</h3>
-          <!-- Inserta un gráfico aquí -->
-        </div>
-        <div class="chart">
-          <h3>Transacciones Completadas</h3>
-        </div>
-        <div class="chart">
-          <h3>Transacciones Pendientes</h3>
+          <p>Visualización de transacciones en progreso, completadas y pendientes</p>
         </div>
       </div>
-    </div>
+      <!-- Mostrar tareas y alertas si showNotifications es true -->
+      <div v-if="showNotifications" class="alerts-tasks">
+        <h2>Alertas y Tareas Pendientes</h2>
+        <ul>
+          <li>Tarea 1</li>
+          <li>Tarea 2</li>
+          <li>Alerta importante</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Accesos Directos -->
-    <div class="shortcuts">
-      <h2>Accesos Directos</h2>
-      <div class="shortcuts-grid">
-        <div class="shortcut" @click="navigateTo('centralization')">
-          Centralización de Información
-        </div>
-        <div class="shortcut" @click="navigateTo('stages')">
-          Seguimiento de Etapas
-        </div>
-        <div class="shortcut" @click="navigateTo('organization')">
-          Organización Eficiente
-        </div>
-        <div class="shortcut" @click="navigateTo('purchasing')">
-          Interacción con el Área de Compras
-        </div>
-        <div class="shortcut" @click="navigateTo('analysis')">
-          Análisis y Reportes
-        </div>
-      </div>
-    </div>
-
-    <!-- Alertas y Tareas Pendientes -->
-    <div class="alerts-tasks">
-      <h2>Alertas y Tareas Pendientes</h2>
-      <ul>
-        <li>Tarea Urgente 1</li>
-        <li>Recordatorio Importante</li>
-      </ul>
-    </div>
+    <section class="shortcuts">
+      <button @click="goToCentralization">Centralización de Información</button>
+      <button @click="goToTracking">Seguimiento de Etapas</button>
+      <button @click="goToOrganization">Organización Eficiente</button>
+      <button @click="goToPurchases">Interacción con el Área de Compras</button>
+      <button @click="goToReports">Análisis y Reportes</button>
+    </section>
   </div>
 </template>
 
-<script setup>
-const logout = () => {
-  localStorage.removeItem('authToken');
-  window.location.href = '/';
-};
-
-const navigateTo = (section) => {
-  // Lógica para navegar a las secciones específicas
-  console.log(`Navegando a: ${section}`);
+<script>
+export default {
+  name: "HomeView",
+  data() {
+    return {
+      dropdownOpen: false,
+      showNotifications: false,
+      notifications: [
+        { type: 'tarea', message: 'Tarea 1' },
+        { type: 'tarea', message: 'Tarea 2' },
+        { type: 'alerta', message: 'Alerta importante' },
+      ]
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.dropdownOpen = !this.dropdownOpen;
+    },
+    toggleNotifications() {
+      this.showNotifications = !this.showNotifications;
+    },
+    goToProfile() {
+      this.$router.push({ name: 'Profile' });
+    },
+    goToSettings() {
+      this.$router.push({ name: 'Settings' });
+    },
+    logout() {
+      this.$router.push({ name: 'UserLogin' });
+    },
+    goToCentralization() {
+      this.$router.push({ name: 'Centralization' });
+    },
+    goToTracking() {
+      this.$router.push({ name: 'Tracking' });
+    },
+    goToOrganization() {
+      this.$router.push({ name: 'Organization' });
+    },
+    goToPurchases() {
+      this.$router.push({ name: 'Purchases' });
+    },
+    goToReports() {
+      this.$router.push({ name: 'Reports' });
+    }
+  }
 };
 </script>
 
 <style scoped>
-.home-container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: #f0f2f5; /* Fondo por defecto */
-}
-
+/* Estilos para la barra de navegación superior */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
   padding: 10px 20px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
 }
 
-.navbar-left {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 40px;
-  margin-right: 10px;
+  height: 60px;
+  margin-right: 15px;
 }
 
-.navbar-right {
+.system-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-info {
   display: flex;
   align-items: center;
 }
 
-.notifications {
-  margin-right: 20px;
-}
-
-.user-menu span {
-  margin-left: 10px;
+.profile-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
-.process-status-panel, .alerts-tasks, .shortcuts {
-  margin-top: 20px;
+.user-photo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ecf0f1;
 }
 
-.status-charts {
-  display: flex;
-  justify-content: space-around;
+.dropdown {
+  position: relative;
 }
 
-.chart {
-  width: 30%;
-  background-color: #fff;
-  padding: 20px;
+.dropdown-content {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #34495e;
   border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.shortcuts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.shortcut {
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
+.dropdown-content span {
+  display: block;
+  padding: 10px;
+  color: #ecf0f1;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 14px; /* Tamaño de fuente más pequeño */
 }
 
-.shortcut:hover {
-  background-color: #0056b3;
+.dropdown-content span:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos para el panel de estado de procesos */
+.status-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.status-charts,
+.alerts-tasks {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
 }
 
 .alerts-tasks ul {
   list-style-type: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 .alerts-tasks li {
-  background-color: #ffeeba;
-  padding: 10px;
   margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para los accesos directos */
+.shortcuts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.shortcuts button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shortcuts button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos para el botón de notificaciones */
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+  color: #ecf0f1;
+  font-size: 24px;
+}
+
+.notification-btn .notification-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
 }
 </style>
