@@ -69,7 +69,7 @@ input:valid ~ label {
     outline: none;
     font-size: 1rem;
     padding: 0 0 5px;
-    color: #fff;
+    color: #94B1AC;
 }
 
 .input-contenedor i {
@@ -83,7 +83,7 @@ input:valid ~ label {
 /* Mejora en la sección de Recordar y Olvidar Contraseña */
 .olvidar {
     margin: 20px 0;
-    color: #fff;
+    color: #94B1AC;
     display: flex;
     justify-content: space-between;
     width: 300px;
@@ -100,7 +100,7 @@ input:valid ~ label {
 }
 
 .olvidar a {
-    color: #fff;
+    color: #94B1AC;
     text-decoration: none;
     font-size: 0.9em;
     transition: color 0.3s;
@@ -133,14 +133,14 @@ button:hover {
 /* Espaciado entre el botón y el enlace para crear una cuenta */
 .registrar {
     font-size: 0.8rem;
-    color: #fff;
+    color: #94B1AC;
     text-align: center;
     margin-top: 20px; /* Ajuste del margen superior */
 }
 
 .registrar p a {
     text-decoration: none;
-    color: #fff;
+    color: #94B1AC;
     font-weight: bold;
     transition: color 0.3s;
 }
