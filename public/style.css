@@ -1,94 +1,151 @@
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Helvetica Neue', sans-serif;
+section {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-image: url(bg.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg.jpg) no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
-form {
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
+.contenedor {
+    position: relative;
     width: 400px;
-    box-shadow: 0 0 20px black;
-    border-radius: 15px;
-    background-color: #EEEEEE;
+    border: 2px solid rgb(250, 240, 240);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    height: 480px; /* Aumenté la altura para mayor espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(231, 228, 228, 0.726); /* Fondo gris sutil */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+.contenedor h2 {
+    font-size: 2.3rem;
+    color: #82A39C;
     text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #2e2e2e;
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-label, .btn-link {
-    font-size: 17px;
-    color: #575757;
-    margin-bottom: 10px;
-    display: block;
+.input-contenedor {
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+    border-bottom: 2px solid #94B1AC;
+}  
+
+.input-contenedor label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #B5D3CF;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: top 0.3s ease;
+    font-weight: bold;
 }
 
-input {
-    padding: 17px 11px;
-    border: 1px solid #00adef;
-    border-radius: 25px;
-    margin-bottom: 25px;
-    background-color: #fafcfa;
-    outline: none;
-    color: #00adef;
-    font-size: 16px;
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
 }
 
-.btn-1 {
-    background-color: #00adef;
-    font-size: 15px;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
+.input-contenedor input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 0 5px;
+    color: #fff;
 }
 
-.btn-1:hover {
-    background-color: #007bb5;
+.input-contenedor i {
+    position: absolute;
+    color:#94B1AC;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
 }
 
-.remember {
+/* Mejora en la sección de Recordar y Olvidar Contraseña */
+.olvidar {
+    margin: 20px 0;
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
-    flex-direction: column;
+    width: 300px;
 }
 
-.btn-link {
+.olvidar label {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.olvidar input {
+    margin-right: 5px;
+}
+
+.olvidar a {
+    color: #fff;
     text-decoration: none;
-    color: #00adef;
+    font-size: 0.9em;
+    transition: color 0.3s;
 }
 
-.btn-link:hover {
+.olvidar a:hover {
+    color: #ccc;
     text-decoration: underline;
 }
 
-@media (max-width: 991px) {
-    body {
-        padding: 30px;
-    }
+/* Estilo del botón de Acceder */
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background-color:#94B1AC;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: opacity 0.4s;
+    margin-top: 20px;
+}
 
-    form {
-        width: 100%;
-    }
+button:hover {
+    opacity: 0.9;
+}
+
+/* Espaciado entre el botón y el enlace para crear una cuenta */
+.registrar {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px; /* Ajuste del margen superior */
+}
+
+.registrar p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.registrar p a:hover {
+    color: #ccc;
+    text-decoration: underline;
 }

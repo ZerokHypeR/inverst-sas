@@ -2,28 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/02d39e298d.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inverst S.A.S Login</title>
   <link rel="stylesheet" href="style.css">
+  <title>Login Inverst S.A.S</title>
 </head>
 <body>
-  <form action="/login" method="post">
-    <h2>Login</h2>
+   <section>
+    <div class="contenedor">
+      <div class="formulario">
+        <form action="#">
+          <h2>Iniciar Sesión</h2>
 
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" required>
+          <div class="input-contenedor">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
+          <div class="input-contenedor">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
 
-    <div class="remember">
-      <a href="/register" class="btn-link">Registrarme.</a>
-      <a href="/forgot-password" class="btn-link">Olvidé Mi Contraseña.</a>
+          <div class="olvidar">
+            <label for ="#">
+              <input type="checkbox"> Recordar
+              <a href="#">Olvidé La Contraseña</a>
+            </label>
+          </div>
+        </form>
+        
+        <div>
+          <button>Acceder</button>
+          <div class="registrar">
+            <p>No Tengo Una Cuenta <a href="#">Crear Una Cuenta</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <input type="submit" class="btn-1" value="Iniciar">
-    </div>
-  </form>
+   </section>
 </body>
 </html>
