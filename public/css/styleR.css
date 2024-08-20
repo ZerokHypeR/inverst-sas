@@ -13,7 +13,7 @@ section {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url(fondoregistro.jpeg) no-repeat center center;
+    background: url(../fondoregistro.jpeg) no-repeat center center;
     background-size: cover;
 }
 
