@@ -18,6 +18,11 @@ const routes: RouteRecordRaw[] = [
     redirect: '/register.html ' // Redirige a home.html en la carpeta public
   },
 
+{
+  path:'/Home',
+  redirect: '/home.html'
+},
+
 
   {
     path: '/dashboard',
