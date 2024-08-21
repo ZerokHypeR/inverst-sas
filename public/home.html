@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styleH.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<h1>inicio de home principal de todo</h1>
+    <header>
+        <div class="logo">
+            <h1>Inverst S.A.S</h1>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#"><span class="material-icons">home</span>Home</a></li>
+                <li><a href="#"><span class="material-icons">notifications</span>Alertas</a></li>
+                <li><a href="#"><span class="material-icons">task_alt</span>Tareas</a></li>
+                <li><a href="#"><span class="material-icons">chat</span>Chat</a></li>
+                <li><a href="#"><span class="material-icons">directions_car</span>Autos</a></li>
+                <li><a href="#"><span class="material-icons">bar_chart</span>Análisis</a></li>
+            </ul>
+        </nav>
+        <button class="dropdown-btn">Menú</button>
+        <div class="dropdown-content">
+            <a href="#">Perfil</a>
+            <a href="#">Configuración</a>
+            <a href="#">Cerrar sesión</a>
+        </div>
+    </header>
+        <aside class="sidebar">
+            <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+            <div class="sidebar-content">
+            <ul>
+                <li><a href="mensajes.html"><span class="material-icons">mail</span>Mensajes y Notificaciones</a></li>
+                <li><a href="documentos.html"><span class="material-icons">folder</span>Documentos</a></li>
+                <li><a href="contratos.html"><span class="material-icons">article</span>Contratos</a></li>
+                <li><a href="datos_financieros.html"><span class="material-icons">attach_money</span>Datos Financieros</a></li>
+                <li><a href="autos.html"><span class="material-icons">directions_car</span>Autos</a></li>
+                <li><a href="timeline.html"><span class="material-icons">timeline</span>Vista de Línea de Tiempo</a></li>
+                <li><a href="integracion.html"><span class="material-icons">sync</span>Integración de Datos</a></li>
+                <li><a href="compartir.html"><span class="material-icons">share</span>Compartir Documentos</a></li>
+                <li><a href="subir.html"><span class="material-icons">cloud_upload</span>Subir Documentos</a></li>                
+                <li><a href="eliminar.html"><span class="material-icons">delete</span>Eliminar/Archivar Documentos</a></li>
+                <li><a href="otros.html"><span class="material-icons">more_horiz</span>Otros</a></li>
+
+            </ul>
+
+        </div>
+    </aside>
+    <main>
+        <h2>Bienvenido a la Página Principal</h2>
+        <p>Aquí puedes ver el contenido principal.</p>
+        <div class="search-container">
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="search-name">Nombre:</label>
+                    <input type="text" id="search-name" placeholder="Buscar por nombre..." pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios">
+                </div>
+                
+                <div class="form-group">
+                    <label for="search-id-type">Tipo de ID:</label>
+                    <select id="search-id-type">
+                        <option value="">Seleccionar tipo de ID</option>
+                        <option value="CC">Cédula de ciudadanía</option>
+                        <option value="CE">Cédula de extranjería</option>
+                        <option value="NI">NIT</option>
+                        <option value="PB">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="search-id">ID:</label>
+                    <input type="number" id="search-id" placeholder="Buscar por ID..." required>
+                </div>
+                <button type="button" id="search-btn">Buscar</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/script.Base.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

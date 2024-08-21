@@ -1,29 +1,23 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
- 
 
   {
     path: '/',
-    name: 'UserRegisterPage',
-    component: () => import('../pages/UserRegisterPage.vue'),
+    redirect: '/login.html' // Redirige a login.html en la carpeta public
   },
   {
-    path: '/login',
-    redirect: '/login.html' // Redirige a home.html en la carpeta public
+    path: '/registro',
+    redirect: '/register.html' // Redirige a register.html en la carpeta public
   },
-
   {
-    path: '/Registro',
-    redirect: '/register.html ' // Redirige a home.html en la carpeta public
+    path: '/home',
+    redirect: '/home.html' // Redirige a home.html en la carpeta public
   },
-
-{
-  path:'/Home',
-  redirect: '/home.html'
-},
-
-
+  {
+    path: '/about',
+    component: () => import('../views/AppAbout.vue') // Cambio del nombre del componente a AppAbout.vue
+  },
   {
     path: '/dashboard',
     name: 'DashboardPage',

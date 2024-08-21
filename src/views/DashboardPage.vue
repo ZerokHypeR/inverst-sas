@@ -1,3 +1,3 @@
 <template>
-  <h1>2</h1>
+	<h1> no se que colocar aqui</h1>
 </template>
