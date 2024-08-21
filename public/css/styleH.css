@@ -61,6 +61,7 @@ header .dropdown-btn {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
+    position: relative;
 }
 
 header .dropdown-content {
@@ -71,6 +72,7 @@ header .dropdown-content {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     right: 25px;
     top: 55px;
+    z-index: 1;
 }
 
 header .dropdown-content a {
@@ -84,7 +86,8 @@ header .dropdown-content a:hover {
     background: #f9f9f9;
 }
 
-header .dropdown-btn:hover + .dropdown-content {
+header .dropdown-btn:hover + .dropdown-content,
+header .dropdown-btn:focus + .dropdown-content {
     display: block;
 }
 
@@ -103,6 +106,21 @@ header .dropdown-btn:hover + .dropdown-content {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 25px;
     margin-right: 25px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar .sidebar-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .sidebar h2 {
@@ -147,51 +165,42 @@ main {
     margin-bottom: 25px;
 }
 
-form {
+.search-container form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.form-group {
-    margin-bottom: 18px;
+.search-container .form-group {
+    flex: 1;
+    margin-right: 15px;
 }
 
-.form-group label {
-    display: block;
+.search-container label {
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    display: block;
     color: #333;
 }
 
-.form-group input, .form-group select {
+.search-container input, 
+.search-container select {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-.form-group input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-.form-group input[type="number"]::-webkit-inner-spin-button,
-.form-group input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-form button {
+.search-container button {
     background: #f0a500;
-    color: #fff;
     border: none;
+    color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
+    margin-top: 12px;
 }
 
-form button:hover {
-    background: #c87c00;
+.search-container button:hover {
+    background: #d98c00;
 }

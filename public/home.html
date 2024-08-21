@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styleH.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -29,9 +30,11 @@
             <a href="#">Cerrar sesión</a>
         </div>
     </header>
-        <aside class="sidebar">
-            <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
-            <div class="sidebar-content">
+    <aside class="sidebar">
+        <button class="sidebar-toggle" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="sidebar-content">
             <ul>
                 <li><a href="mensajes.html"><span class="material-icons">mail</span>Mensajes y Notificaciones</a></li>
                 <li><a href="documentos.html"><span class="material-icons">folder</span>Documentos</a></li>
@@ -44,9 +47,7 @@
                 <li><a href="subir.html"><span class="material-icons">cloud_upload</span>Subir Documentos</a></li>                
                 <li><a href="eliminar.html"><span class="material-icons">delete</span>Eliminar/Archivar Documentos</a></li>
                 <li><a href="otros.html"><span class="material-icons">more_horiz</span>Otros</a></li>
-
             </ul>
-
         </div>
     </aside>
     <main>
