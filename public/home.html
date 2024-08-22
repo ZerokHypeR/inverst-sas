@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styleH.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -19,8 +19,7 @@
                 <li><a href="#"><span class="material-icons">notifications</span>Alertas</a></li>
                 <li><a href="#"><span class="material-icons">task_alt</span>Tareas</a></li>
                 <li><a href="#"><span class="material-icons">chat</span>Chat</a></li>
-                <li><a href="#"><span class="material-icons">directions_car</span>Autos</a></li>
-                <li><a href="#"><span class="material-icons">bar_chart</span>Análisis</a></li>
+                
             </ul>
         </nav>
         <button class="dropdown-btn">Menú</button>
@@ -30,30 +29,132 @@
             <a href="#">Cerrar sesión</a>
         </div>
     </header>
-    <aside class="sidebar">
-        <button class="sidebar-toggle" onclick="toggleSidebar()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="sidebar-content">
-            <ul>
-                <li><a href="mensajes.html"><span class="material-icons">mail</span>Mensajes y Notificaciones</a></li>
-                <li><a href="documentos.html"><span class="material-icons">folder</span>Documentos</a></li>
-                <li><a href="contratos.html"><span class="material-icons">article</span>Contratos</a></li>
-                <li><a href="datos_financieros.html"><span class="material-icons">attach_money</span>Datos Financieros</a></li>
-                <li><a href="autos.html"><span class="material-icons">directions_car</span>Autos</a></li>
-                <li><a href="timeline.html"><span class="material-icons">timeline</span>Vista de Línea de Tiempo</a></li>
-                <li><a href="integracion.html"><span class="material-icons">sync</span>Integración de Datos</a></li>
-                <li><a href="compartir.html"><span class="material-icons">share</span>Compartir Documentos</a></li>
-                <li><a href="subir.html"><span class="material-icons">cloud_upload</span>Subir Documentos</a></li>                
-                <li><a href="eliminar.html"><span class="material-icons">delete</span>Eliminar/Archivar Documentos</a></li>
-                <li><a href="otros.html"><span class="material-icons">more_horiz</span>Otros</a></li>
-            </ul>
+
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fab fa-trade-federation"></i>
+            <span class="logo-name">Inverst S.A.S</span>
         </div>
-    </aside>
+        
+        <ul class="nav-list">
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span class="link-name">Estado Del Proceso</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+            </li>
+            
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span class="link-name">Seguimiento</span>
+                    </a>
+                </li> 
+
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class="fa-solid fa-clone"></i>
+                            <span class="link-name">Acceso Directo</span>
+                        </a>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                </li>
+               
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <span class="link-name">Seguimiento de Etapas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span class="link-name">Interacción con el Área de Compras 
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i> 
+                        <span class="link-name">Analisis Y Reportes 
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class="fa-solid fa-address-book"></i>
+                            <span class="link-name">Documentos</span>
+                        </a>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                </li>
+            
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-file-contract"></i> 
+                        <span class="link-name">Contratos
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i> 
+                        <span class="link-name">Datos Financieros 
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-car"></i>
+                        <span class="link-name">Autos y Otro 
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-duotone fa-solid fa-share-nodes"></i> 
+                        <span class="link-name">Compartir Documentos 
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="profile-detils">
+                        <div class="profile-content">
+                            <img src="logo.png" alt="logo">
+                        </div>
+                        <div class="name-job">
+                            <div class="name">Inverst S.A.S</div>
+                            <div class="job">Web Inverst S.A.S</div>
+                        </div>
+                        <i class="fas fa-right-to-bracket"></i>
+
+                    </div>
+                </li>
+        </ul> 
+          
+    </div>
+
+    <div class="home-section">
+        <div class="home-content">
+            <i class="fas fa-bars"></i>
+            <span class="text">Dropdown Sidebar Menu</span> 
+        </div>
+    </div>
+
     <main>
-        <h2>Bienvenido a la Página Principal</h2>
-        <p>Aquí puedes ver el contenido principal.</p>
         <div class="search-container">
+            <h2>Bienvenido a la Página Principal</h2>
+            <p>Aquí puedes ver el contenido principal.</p>
             <form id="search-form">
                 <div class="form-group">
                     <label for="search-name">Nombre:</label>
@@ -77,12 +178,14 @@
                 <button type="button" id="search-btn">Buscar</button>
             </form>
         </div>
+        <div class="content">
+            <p>Aquí puedes ver el contenido principal.</p>
+        </div>
     </main>
+
     <script src="js/script.Base.js"></script>
     <script>
-        function toggleSidebar() {
-            document.querySelector('.sidebar').classList.toggle('active');
-        }
+        // Puedes agregar scripts adicionales aquí
     </script>
 </body>
 </html>
