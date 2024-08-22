@@ -181,6 +181,12 @@ main {
     z-index: 100;
     transition: all 0.5s ease;
 }
+
+
+.sidebar.close{
+    width: 78px;
+}
+
 .sidebar .logo {
     height: 60px;
     display: flex;
@@ -207,10 +213,20 @@ main {
     margin-left: 10px; /* Espaciado adicional */
 }
 
+.sidebar.sidebar.close .logo .logo-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 .sidebar .nav-list {
     height: calc(100% - 80px); /* Ajuste para no ocupar todo el alto */
     padding: 30px 0 20px; /* Padding ajustado */
     overflow-y: auto; /* Desplazamiento vertical */
+}
+
+.sidebar.close .nav-list{
+    overflow: visible;
 }
 
 .sidebar .nav-list::-webkit-scrollbar {
@@ -235,6 +251,10 @@ main {
     border-radius: 5px; /* Bordes redondeados */
 }
 
+.sidebar.close .nav-list li .icon-link{
+    display: block;
+}
+
 .sidebar .nav-list li i {
     height: 50px;
     min-width: 78px;
@@ -244,6 +264,10 @@ main {
     font-size: 20px;
     cursor: pointer;
     transition: all .3s ease;
+}
+
+.sidebar.close .nav-list li i.arrow{
+    display: none;
 }
 
 .sidebar .nav-list li a{
@@ -258,6 +282,55 @@ main {
     font-weight: 200;
     transition: all .4s ease;
 }
+
+.sidebar.close .nav-list li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-list li .sub-menu{
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #1d1b31;
+}
+
+.sidebar.close .nav-list li .sub-menu{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+.sidebar.close .nav-list li .sub-menu{
+    top: 0;
+    opacity: 2;
+    pointer-events: auto;
+    transition: all .4s ease;
+}
+
+.sidebar .nav-list li:hover .sub-menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0 ;
+    white-space: nowrap;
+    opacity: .6;
+    transition: all .3s ease;
+}
+
+.sidebar .nav-list li .sub-menu a:hover{
+    opacity: 2;
+}
+
+.sidebar .nav-list li .sub-menu .link-name{
+    display: none;
+
+}
+
 
 .porfile-details{
     position: fixed;
@@ -286,12 +359,30 @@ main {
     transition: all .5s ease;
 }
 
+.profile-details .name-job .name,
+.profile-details .name-job .job {
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.profile-details .name-job .job {
+    font-size: 12px;
+}
+
+
+
 /* Configuración de home-section */
 .home-section {
     margin-left: 260px; /* Alineación para que no se superponga con la sidebar */
     padding: 20px;
     background-color: #f4f4f4; /* Color de fondo más claro */
     transition: all 0.3s ease;
+}
+
+.sidebar.close ~.home-section{
+    left: 78px;
+    width: calc(100% - 78px);
 }
 
 .home-section .home-content {

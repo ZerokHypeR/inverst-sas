@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Inverst </title>
+    <!-- Estilos CSS y fuentes -->
     <link rel="stylesheet" href="css/styleH.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+    <!-- Encabezado del sitio con logo y menú de navegación -->
     <header>
+        <!-- Logo de la empresa -->
         <div class="logo">
             <h1>Inverst S.A.S</h1>
         </div>
+        <!-- Menú de navegación principal -->
         <nav>
             <ul class="nav-list">
                 <li><a href="#"><span class="material-icons">home</span>Home</a></li>
                 <li><a href="#"><span class="material-icons">notifications</span>Alertas</a></li>
                 <li><a href="#"><span class="material-icons">task_alt</span>Tareas</a></li>
                 <li><a href="#"><span class="material-icons">chat</span>Chat</a></li>
-                
             </ul>
         </nav>
+        <!-- Botón y contenido del menú desplegable -->
         <button class="dropdown-btn">Menú</button>
         <div class="dropdown-content">
             <a href="#">Perfil</a>
@@ -30,13 +34,17 @@
         </div>
     </header>
 
-    <div class="sidebar">
+    <!-- Barra lateral con enlaces de navegación -->
+    <div class="sidebar close">
+        <!-- Logo de la empresa en la barra lateral -->
         <div class="logo">
             <i class="fab fa-trade-federation"></i>
             <span class="logo-name">Inverst S.A.S</span>
         </div>
         
+        <!-- Lista de navegación en la barra lateral -->
         <ul class="nav-list">
+            <!-- Enlace de estado del proceso -->
             <li>
                 <div class="icon-link">
                     <a href="#">
@@ -45,105 +53,135 @@
                     </a>
                     <i class="fas fa-caret-down arrow"></i>
                 </div>
+
+                <ul class="sub-menu">
+                    <li><a href="#" class="link name">Estado Del Proceso</a></li>
+                    <li><a href="#"> Block Chain</a></li>
+                    <li><a href="#"> Block Chain</a></li>
+                    <li><a href="#"> Block Chain</a></li>
+                </ul>
+
+
             </li>
             
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-crosshairs"></i>
-                        <span class="link-name">Seguimiento</span>
-                    </a>
-                </li> 
+            <!-- Enlace de seguimiento -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-crosshairs"></i>
+                    <span class="link-name">Seguimiento</span>
+                </a>
+            </li> 
 
-                <li>
-                    <div class="icon-link">
-                        <a href="#">
-                            <i class="fa-solid fa-clone"></i>
-                            <span class="link-name">Acceso Directo</span>
-                        </a>
-                        <i class="fas fa-caret-down arrow"></i>
+            <!-- Enlace de acceso directo -->
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="fa-solid fa-clone"></i>
+                        <span class="link-name">Acceso Directo</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link name">Acceso Directo</a></li>
+                    <li><a href="#">Seguimiento De Etapas</a></li>
+                    <li><a href="#"> Interacción con el Área de Compras</a></li>
+                    <li><a href="#"> Análisis Y Reportes </a></li>
+                </ul>
+            </li>
+           
+            <!-- Enlace de seguimiento de etapas -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-people-arrows"></i>
+                    <span class="link-name">Seguimiento de Etapas</span>
+                </a>
+            </li>
+            <!-- Enlace de interacción con el área de compras -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="link-name">Interacción con el Área de Compras</span>
+                </a>
+            </li>
+            <!-- Enlace de análisis y reportes -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-line"></i> 
+                    <span class="link-name">Centralización de Información </span>
+                </a>
+            </li>
+
+            <!-- Enlace de documentos -->
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span class="link-name">Documentos</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link name">Documentos</a></li>
+                    <li><a href="#">Contratos</a></li>
+                    <li><a href="#"> Datos Financieros</a></li>
+                    <li><a href="#"> Autos y Otros</a></li>
+                    <li><a href="#"> Compartir Documentos</a></li>
+                </ul>
+            </li>
+        
+            <!-- Enlace de contratos -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-file-contract"></i> 
+                    <span class="link-name">Contratos</span>
+                </a>
+            </li>
+
+            <!-- Enlace de datos financieros -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-line"></i> 
+                    <span class="link-name">Datos Financieros</span>
+                </a>
+            </li>
+
+            <!-- Enlace de autos y otros -->
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-car"></i>
+                    <span class="link-name">Autos y Otros</span>
+                </a>
+            </li>
+
+            <!-- Enlace para compartir documentos -->
+            <li>
+                <a href="#">
+                    <i class="fa-duotone fa-solid fa-share-nodes"></i> 
+                    <span class="link-name">Compartir Documentos</span>
+                </a>
+            </li>   
+
+            <!-- Información del perfil en la barra lateral -->
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="logo.png" alt="logo">
                     </div>
-                </li>
-               
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-people-arrows"></i>
-                        <span class="link-name">Seguimiento de Etapas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-wallet"></i>
-                        <span class="link-name">Interacción con el Área de Compras 
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-chart-line"></i> 
-                        <span class="link-name">Analisis Y Reportes 
-                        </span>
-                    </a>
-                </li>
 
-                <li>
-                    <div class="icon-link">
-                        <a href="#">
-                            <i class="fa-solid fa-address-book"></i>
-                            <span class="link-name">Documentos</span>
-                        </a>
-                        <i class="fas fa-caret-down arrow"></i>
+
+                    <div class="name-job">
+                        <div class="name">Inverst S.A.S</div>
+                        <div class="job">Web Inverst S.A.S</div>
                     </div>
-                </li>
-            
-
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-file-contract"></i> 
-                        <span class="link-name">Contratos
-                        </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-chart-line"></i> 
-                        <span class="link-name">Datos Financieros 
-                        </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-car"></i>
-                        <span class="link-name">Autos y Otro 
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-duotone fa-solid fa-share-nodes"></i> 
-                        <span class="link-name">Compartir Documentos 
-                        </span>
-                    </a>
-                </li>
-
-                <li>
-                    <div class="profile-details">
-                        <div class="profile-content">
-                            <img src="logo.png" alt="logo">
-                        </div>
-                        <div class="name-job">
-                            <div class="name">Inverst S.A.S</div>
-                            <div class="job">Web Inverst S.A.S</div>
-                        </div>
-                        <i class="fas fa-right-to-bracket"></i>
-
+                    <i class="fas fa-right-to-bracket"></i>
                     </div>
-                </li>
+            </li>
+
+
         </ul> 
-          
     </div>
 
+    <!-- Sección principal de la página -->
     <div class="home-section">
         <div class="home-content">
             <i class="fas fa-bars"></i>
@@ -151,10 +189,13 @@
         </div>
     </div>
 
+    <!-- Contenido principal de la página -->
     <main>
+        <!-- Contenedor de búsqueda -->
         <div class="search-container">
             <h2>Bienvenido a la Página Principal</h2>
             <p>Aquí puedes ver el contenido principal.</p>
+            <!-- Formulario de búsqueda -->
             <form id="search-form">
                 <div class="form-group">
                     <label for="search-name">Nombre:</label>
@@ -178,11 +219,13 @@
                 <button type="button" id="search-btn">Buscar</button>
             </form>
         </div>
+        <!-- Contenido adicional -->
         <div class="content">
             <p>Aquí puedes ver el contenido principal.</p>
         </div>
     </main>
 
+    <!-- Archivos JavaScript -->
     <script src="js/script.Base.js"></script>
     <script>
         // Puedes agregar scripts adicionales aquí
