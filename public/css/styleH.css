@@ -1,274 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Reset y Configuración General */
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins, sans-serif";
 }
 
-/* Configuración del body */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #f4f4f4; /* Color de fondo más claro */
-}
-
-/* Configuración del header */
-header {
-    width: 100%;
-    background: #343a40; /* Color de fondo más oscuro */
-    color: #fff;
-    padding: 20px 30px; /* Mayor padding para mayor área de clic */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-}
-
-header .logo h1 {
-    margin: 0;
-    font-size: 26px; /* Tamaño de fuente ligeramente mayor */
-    font-weight: 700;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-right: 30px; /* Mayor margen entre los elementos */
-}
-
-header nav ul li a {
-    color: #f8f9fa; /* Color de texto más claro */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s; /* Transición suave para el cambio de color */
-}
-
-header nav ul li a:hover {
-    color: #f39c12; /* Color de resaltado más cálido */
-}
-
-header .dropdown-btn {
-    background: #f39c12; /* Color de fondo más vibrante */
-    border: none;
-    color: #fff;
-    padding: 12px 20px; /* Padding ajustado */
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600; /* Mayor peso de fuente */
-    position: relative;
-    transition: background 0.3s; /* Transición suave para el cambio de fondo */
-}
-
-header .dropdown-btn:hover {
-    background: #e67e22; /* Color de fondo al pasar el mouse */
-}
-
-header .dropdown-content {
-    display: none;
-    position: absolute;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    right: 30px; /* Alineación ajustada */
-    top: 60px; /* Ajuste de la posición */
-    z-index: 1;
-}
-
-header .dropdown-content a {
-    display: block;
-    padding: 12px 20px; /* Padding ajustado */
-    color: #333;
-    text-decoration: none;
-}
-
-header .dropdown-content a:hover {
-    background: #f1f1f1; /* Fondo de resaltado más suave */
-}
-
-header .dropdown-btn:hover + .dropdown-content,
-header .dropdown-btn:focus + .dropdown-content {
-    display: block;
-}
-
-/* Configuración del main */
-main {
-    flex: 1;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    padding: 25px;
-    margin-top: 20px;
-}
-
-/* Configuración de la search-container */
-.search-container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    padding: 25px;
-    margin-bottom: 25px;
-}
-
-.search-container h2 {
-    font-size: 26px; /* Tamaño de fuente ligeramente mayor */
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.search-container p {
-    font-size: 18px;
-    margin-bottom: 25px;
-    color: #666;
-}
-
-.search-container form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.search-container .form-group {
-    flex: 1;
-    margin-right: 15px;
-}
-
-.search-container label {
-    font-weight: 700;
-    margin-bottom: 8px;
-    display: block;
-    color: #333;
-}
-
-.search-container input, 
-.search-container select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.search-container button {
-    background: #f39c12; /* Color de fondo vibrante */
-    border: none;
-    color: #fff;
-    padding: 12px 20px; /* Padding ajustado */
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 700;
-    margin-top: 12px;
-    transition: background 0.3s; /* Transición suave para el cambio de fondo */
-}
-
-.search-container button:hover {
-    background: #e67e22; /* Color de fondo al pasar el mouse */
-}
-
-/* Configuración de la sidebar */
-.sidebar {
+.sidebar{
     position: fixed;
     top: 0;
-    left: 0; /* Cambiado para la derecha */
-    height: 100%;
+    left: 0;
+    height:100%;
     width: 260px;
-    background-color: #343a40; /* Color de fondo oscuro */
-    color: #fff;
+    background-color: #11101d;
     z-index: 100;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 }
-
 
 .sidebar.close{
     width: 78px;
+
 }
 
-.sidebar .logo {
+
+.sidebar .logo{
     height: 60px;
     display: flex;
     width: 100%;
     align-items: center;
-    background-color: #23272b; /* Color de fondo más oscuro para el logo */
-    padding: 10px; /* Padding para el logo */
+
 }
 
 .sidebar .logo i {
     font-size: 30px;
-    color: #f39c12; /* Color de íconos más vibrante */
+    color: #fff;
     height: 50px;
     min-width: 78px;
     text-align: center;
     line-height: 50px;
 }
 
-.sidebar .logo .logo-name {
+.sidebar .logo .logo-name{
     font-size: 22px;
     color: #fff;
     font-weight: 600;
-    transition: all 0.3s ease;
-    margin-left: 10px; /* Espaciado adicional */
+    transition: all .3s ease;
+    transition-delay: 1s;
 }
 
-.sidebar.sidebar.close .logo .logo-name{
+
+.sidebar.close .logo .logo-name{
     opacity: 0;
     pointer-events: none;
+    
 }
 
-
-.sidebar .nav-list {
-    height: calc(100% - 80px); /* Ajuste para no ocupar todo el alto */
-    padding: 30px 0 20px; /* Padding ajustado */
-    overflow-y: auto; /* Desplazamiento vertical */
+.sidebar .nav-list{
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
 }
 
 .sidebar.close .nav-list{
     overflow: visible;
+
 }
 
-.sidebar .nav-list::-webkit-scrollbar {
+.sidebar .nav-list::-webkit-scrollbar{
     display: none;
 }
 
-.sidebar .nav-list li {
+.sidebar .nav-list li{
     position: relative;
     list-style: none;
-    transition: background 0.3s; /* Transición suave para el cambio de fondo */
+    transition: all .4s ease;
+}
+.sidebar .nav-list li:hover{
+    background-color: #11101d;
 }
 
-.sidebar .nav-list li:hover {
-    background-color: #495057; /* Fondo de resaltado al pasar el mouse */
-}
 
-.sidebar .nav-list li .icon-link {
+
+.sidebar .nav-list li .icon-link{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; /* Padding para el enlace */
-    border-radius: 5px; /* Bordes redondeados */
 }
 
 .sidebar.close .nav-list li .icon-link{
     display: block;
 }
 
-.sidebar .nav-list li i {
+.sidebar .nav-list li i{
     height: 50px;
     min-width: 78px;
     text-align: center;
     line-height: 50px;
-    color: #f39c12; /* Color de íconos más vibrante */
+    color: #fff;
     font-size: 20px;
     cursor: pointer;
     transition: all .3s ease;
 }
-
 .sidebar.close .nav-list li i.arrow{
     display: none;
 }
+
 
 .sidebar .nav-list li a{
     display: flex;
@@ -276,22 +114,24 @@ main {
     text-decoration: none;
 }
 
-.sidebar .nav-list li a .link-name{
+.sidebar .nav-list li .link-name{
     color: #fff;
-    font-size: 15px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 400;
     transition: all .4s ease;
 }
 
-.sidebar.close .nav-list li a .link-name{
+.sidebar.close .nav-list li .link-name{
     opacity: 0;
     pointer-events: none;
 }
 
+
 .sidebar .nav-list li .sub-menu{
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #1d1b31;
+    background-color: #1b1b31;
+    display: none;
 }
 
 .sidebar.close .nav-list li .sub-menu{
@@ -300,110 +140,149 @@ main {
     top: -10px;
     margin-top: 0;
     padding: 10px 20px;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 6px 6px  0;
     opacity: 0;
     display: block;
     pointer-events: none;
     transition: 0s;
 }
-.sidebar.close .nav-list li .sub-menu{
+
+.sidebar.close .nav-list li:hover .sub-menu{
     top: 0;
-    opacity: 2;
+    opacity: 1;
     pointer-events: auto;
     transition: all .4s ease;
 }
 
-.sidebar .nav-list li:hover .sub-menu a{
+.sidebar .nav-list li .sub-menu a{
     color: #fff;
     font-size: 15px;
-    padding: 5px 0 ;
+    padding: 5px 0;
     white-space: nowrap;
     opacity: .6;
     transition: all .3s ease;
 }
-
 .sidebar .nav-list li .sub-menu a:hover{
-    opacity: 2;
+    opacity: 1;
 }
-
 .sidebar .nav-list li .sub-menu .link-name{
     display: none;
+}
 
+.sidebar.close .nav-list li .sub-menu .link-name{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
 }
 
 
-.porfile-details{
+.sidebar .nav-list li .sub-menu.blank{
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-list li:hover .sub-menu.blank{
+    top: 50px;
+    transform: translateY(-50%);
+}
+
+
+.profile-details{
     position: fixed;
     bottom: 0;
     width: 260px;
     display: flex;
-    align-items: center;
+   align-items: center;
     justify-content: space-between;
-    background-color: #1d1b31;
+    background-color: #1b1b31;
     padding: 12px 0;
     transition: all .5s ease;
+}
+
+
+.sidebar.close .profile-details{
+    background-color: none;
+    width: 78px ;
 }
 
 .profile-details .profile-content{
     display: flex;
     align-items: center;
-}
+} 
 
 .profile-details .profile-content img{
     height: 51px;
     width: 51px;
-    border-radius: 50%;
+    border-radius: 45px;
     object-fit: cover;
     margin: 0 14px 0 12px;
     background-color: #1d1b31;
     transition: all .5s ease;
 }
 
+
+.sidebar.close .profile-details .profile-content img{
+    padding: 10px;
+}
+
+
 .profile-details .name-job .name,
-.profile-details .name-job .job {
+.profile-details .name-job .job{
     color: #fff;
     font-size: 18px;
     white-space: nowrap;
 }
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .name-job .name,
+.sidebar.close .profile-details .name-job .job{
+    opacity: 0;
+    pointer-events: none;
 
-.profile-details .name-job .job {
-    font-size: 12px;
 }
 
 
-
-/* Configuración de home-section */
-.home-section {
-    margin-left: 260px; /* Alineación para que no se superponga con la sidebar */
-    padding: 20px;
-    background-color: #f4f4f4; /* Color de fondo más claro */
-    transition: all 0.3s ease;
+.profile-details .name-job .job{
+    font-size: 12px ;
 }
 
-.sidebar.close ~.home-section{
+
+.home-section{
+    position: relative;
+    height: 100vh;
+    width: calc(100% -260px);    
+    left: 260px;
+    background-color: #e4e9f7;
+    transition: all .5 ease;
+}
+
+.sidebar.close ~ .home-section{
     left: 78px;
     width: calc(100% - 78px);
+
 }
 
-.home-section .home-content {
+.home-section .home-content{
     display: flex;
+    height: 60px;
     align-items: center;
 }
 
+
 .home-section .home-content i,
-.home-section .home-content .text {
-    color: #f39c12; /* Color más vibrante para íconos y texto */
+.home-section .home-content .text{
+    color: #11101d;
     font-size: 35px;
 }
 
-.home-section .home-content i {
-    margin-right: 15px;
+.home-section .home-content i{
+    margin: 0 15px;
     cursor: pointer;
 }
 
-.home-section .home-content .text {
-    font-size: 24px;
+.home-section .home-content .text{
+    white-space: nowrap;
+    font-size: 20px;
     font-weight: 600;
-    margin-left: 10px;
-    color: #333;
-}
+}   
+
