@@ -15,6 +15,9 @@ const routes: RouteRecordRaw[] = [
     redirect: '/home.html' // Redirige a home.html en la carpeta public
   },
   {
+
+    
+
     path: '/about',
     component: () => import('../views/AppAbout.vue') // Cambio del nombre del componente a AppAbout.vue
   },
