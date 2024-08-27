@@ -1,3 +1,4 @@
+// Conexión a MongoDB en PHP
 <?php
 require '../vendor/autoload.php'; // Asegúrate de ajustar la ruta si es necesario
 
