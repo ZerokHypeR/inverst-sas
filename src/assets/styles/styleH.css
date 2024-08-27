@@ -304,7 +304,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000; /* Asegúrate de que la topbar esté encima del contenido */
+    z-index: 1000;
   }
   
   .topbar-buttons {
@@ -322,7 +322,7 @@
   
   /* Estilos para el contenido */
   .content {
-    margin-left: 260px; /* Asegúrate de que el contenido no quede oculto bajo la sidebar */
+    margin-left: 260px; 
     margin-top: 60px; /* Deja espacio para la topbar */
     padding: 20px;
   }
