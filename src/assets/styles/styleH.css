@@ -288,3 +288,41 @@
     font-weight: 600;
 }   
 
+
+
+
+/* Estilos para la topbar */
+.topbar {
+    width: calc(100% - 250px); /* Ajusta el ancho según el ancho de la sidebar */
+    background-color: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 250px; /* Ajusta según el ancho de la sidebar */
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* Asegúrate de que la topbar esté encima del contenido */
+  }
+  
+  .topbar-buttons {
+    display: flex;
+  }
+  
+  .topbar-buttons button {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el contenido */
+  .content {
+    margin-left: 260px; /* Asegúrate de que el contenido no quede oculto bajo la sidebar */
+    margin-top: 60px; /* Deja espacio para la topbar */
+    padding: 20px;
+  }
