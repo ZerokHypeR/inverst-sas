@@ -9,5 +9,6 @@ let arrows = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrows.length; i++) { // Corrige el bucle
     arrows[i].addEventListener("click", (e) => {
         let arrowParent = e.target.parentElement.parentElement; 
+        arrowParent.classList.toggle("show");
     });
 }
