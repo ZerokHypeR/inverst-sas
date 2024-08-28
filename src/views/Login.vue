@@ -1,8 +1,48 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<template>
+  <section>
+    <div class="contenedor">
+      <div class="formulario">
+        <form action="login.php" method="POST">
+          <h2>Iniciar Sesión</h2>
+          <div class="input-contenedor">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-contenedor">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+
+          <div class="olvidar">
+            <label for="#">
+              <input type="checkbox" name="remember"> Recordar
+              <a href="#">Olvidé La Contraseña</a>
+            </label>
+          </div>
+
+          <button type="submit">Acceder</button>
+        </form>
+
+        <div class="registrar">
+          <p>No Tengo Una Cuenta <router-link to="/register">Crear Una Cuenta</router-link></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+
+export default {
+  name: "UserLogin",
+};
+</script>
+
+<style scoped>
+
 
 section {
     display: flex;
@@ -10,7 +50,7 @@ section {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url(../bg.jpg) no-repeat;
+    background: url(../assets/image/bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -149,3 +189,6 @@ button:hover {
     color: #ccc;
     text-decoration: underline;
 }
+
+
+</style>
