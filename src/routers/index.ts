@@ -1,35 +1,32 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import UserLogin from '../views/Login.vue';
+import UserRegister from '../views/Register.vue';
+// import UserHome from '../views/Home.vue'
 
-const routes: RouteRecordRaw[] = [
-
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/login.html' // Redirige a login.html en la carpeta public
+    redirect: '/login', 
+  },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: UserHome, 
+  // },
+  {
+    path: '/login',
+    name: 'Login',
+    component: UserLogin,
   },
   {
-    path: '/registro',
-    redirect: '/register.html' // Redirige a register.html en la carpeta public
-  },
-  {
-    path: '/home',
-    redirect: '/home.html' // Redirige a home.html en la carpeta public
-  },
-  {
-
-    
-
-    path: '/about',
-    component: () => import('../views/AppAbout.vue') // Cambio del nombre del componente a AppAbout.vue
-  },
-  {
-    path: '/dashboard',
-    name: 'DashboardPage',
-    component: () => import('../views/DashboardPage.vue'),
+    path: '/register',
+    name: 'Register',
+    component: UserRegister,
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
